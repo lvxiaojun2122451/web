@@ -1,0 +1,95 @@
+.coord_head .div_nav , .coord_body .div_nav , .coord_foot .div_nav{
+    height: 38px;
+    line-height: 36px;
+    background: #327ECC;
+    border-radius: 2px 2px 0 0;
+}
+.coord_head .a_btn , .coord_body .a_btn , .coord_foot .a_btn{
+    width: 72px;
+    height: 30px;
+    background: url("img/ico1.png") no-repeat center;
+    margin-top: 3px;
+}
+.coord_head .a_btn:active , .coord_body .a_btn:active , .coord_foot .a_btn:active{
+    top: 1px;
+    left: 1px;
+}
+.coord_head .div_body , .coord_body .div_body , .coord_foot .div_body{
+    border: solid 1px #ddd;
+    border-top: 0;
+}
+.coord_head input , .coord_head select , .coord_body input , .coord_body select , .coord_foot input , .coord_foot select{
+    border: solid 1px #ddd;
+    padding:4px 5px;
+    font-size: 12px;
+    width: 100px;
+    transition:all .4s 0s;
+}
+.coord_head input:hover , .coord_head select:hover , .coord_body input:hover , .coord_body select:hover , .coord_foot input:hover , .coord_foot select:hover{
+    border-color: #999;
+}
+.coord_head input:focus , .coord_head select:focus , .coord_body input:focus , .coord_body select:focus , .coord_foot input:focus , .coord_foot select:focus{
+    border-color: #FF893C;
+}
+.coord_body .div_body .div_thead{
+    padding-right: 17px;
+    background:linear-gradient(#F7F7F7 0 , #F2F2F2 50% , #ECECEC 100%);
+    z-index: 1;
+}
+.coord_body .div_body .div_tbody{
+    max-height: 430px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: -40px;
+}
+.coord_body td{
+    border-right: solid 1px #ddd;
+}
+.coord_body thead td{
+    height: 39px;
+    border-bottom: solid 1px #ddd;
+    color: #0A61C1;
+}
+.coord_body tbody td{
+    padding: 5px;
+}
+.coord_body tbody td input , .coord_body tbody td select{
+    width: 80px;
+}
+.coord_body thead td:last-child{
+    border-right: 0px;
+}
+.coord_foot input{
+    border: 0px;
+    height: 22px;
+    width: 80%;
+}
+.coord_foot .div_alone{
+    letter-spacing: 1px;
+}
+.coord_foot .div_alone:after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.coord_submit .a_btn{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    background: #2CA3F0;
+}
+.coord_submit .a_btn:active{
+    top: 1px;
+    left: 1px;
+}
+.coord_width120{
+    width: 120px;
+}
+.coord_width160{
+    width: 160px;
+}
