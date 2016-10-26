@@ -1,4 +1,4 @@
-.coord_head .div_nav , .coord_body .div_nav , .coord_foot .div_nav{
+.coord_head .div_nav , .coord_body .div_nav , .coord_foot .div_nav , .coord_flight .div_nav{
     height: 38px;
     line-height: 36px;
     background: #327ECC;
@@ -14,21 +14,21 @@
     top: 1px;
     left: 1px;
 }
-.coord_head .div_body , .coord_body .div_body , .coord_foot .div_body{
+.coord_head .div_body , .coord_body .div_body , .coord_foot .div_body , .coord_flight .div_body{
     border: solid 1px #ddd;
     border-top: 0;
 }
-.coord_head input , .coord_head select , .coord_body input , .coord_body select , .coord_foot input , .coord_foot select{
+.coord_head input , .coord_head select , .coord_body input , .coord_body select , .coord_foot input , .coord_foot select , .coord_flight select{
     border: solid 1px #ddd;
     padding:4px 5px;
     font-size: 12px;
     width: 100px;
     transition:all .4s 0s;
 }
-.coord_head input:hover , .coord_head select:hover , .coord_body input:hover , .coord_body select:hover , .coord_foot input:hover , .coord_foot select:hover{
+.coord_head input:hover , .coord_head select:hover , .coord_body input:hover , .coord_body select:hover , .coord_foot input:hover , .coord_foot select:hover , .coord_flight select:hover{
     border-color: #999;
 }
-.coord_head input:focus , .coord_head select:focus , .coord_body input:focus , .coord_body select:focus , .coord_foot input:focus , .coord_foot select:focus{
+.coord_head input:focus , .coord_head select:focus , .coord_body input:focus , .coord_body select:focus , .coord_foot input:focus , .coord_foot select:focus , .coord_flight select:focus{
     border-color: #FF893C;
 }
 .coord_body .div_body .div_thead{
@@ -76,6 +76,14 @@
     bottom: 0;
     left: 0;
 }
+.coord_flight .div_body{
+    max-height: 200px;
+    min-height: 30px;
+    overflow-y: scroll;
+}
+.coord_flight .div_body p{
+    line-height: 40px;
+}
 .coord_submit .a_btn{
     width: 70px;
     height: 30px;
@@ -86,6 +94,9 @@
 .coord_submit .a_btn:active{
     top: 1px;
     left: 1px;
+}
+.coord_flight select{
+    width: 130px;
 }
 .coord_width120{
     width: 120px;

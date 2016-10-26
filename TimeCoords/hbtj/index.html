@@ -3,10 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link href="/www/work/trunk/timecoord/css/base.css" rel="stylesheet" type="text/css" />
-    <link href="/www/work/trunk/TimeCoords/hbtj/css.css" rel="stylesheet" type="text/css">
+    <link href="../../timecoord/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css.css" rel="stylesheet" type="text/css">
     <script src="../../timecoord/js/jquery-2.0.3.min.js"></script>
     <script src="js.js"></script>
+    <script src="check.js"></script>
 </head>
 <body>
 
@@ -15,8 +16,8 @@
     <div class="div_body py10">
         <label class="f14 ml20">message&nbsp;&nbsp;<input type="text" value="SCR" disabled="disabled" /></label>
         <label class="f14 ml20">season&nbsp;&nbsp;<input type="text" value="S08" disabled="disabled" /></label>
-        <label class="f14 ml20">date of message&nbsp;&nbsp;<input class="tt" type="text" placeholder="20APR" /></label>
-        <label class="f14 ml20">clearance airport concerned&nbsp;&nbsp;<input class="tt" type="text" placeholder="BRU" /></label>
+        <label class="f14 ml20">date of message&nbsp;&nbsp;<input class="tt" type="text" placeholder="20APR" check_ver="true" /></label>
+        <label class="f14 ml20">clearance airport concerned&nbsp;&nbsp;<input class="tt" id="coord_takeoff" type="text" placeholder="BRU" name="coord_relation" check_ver="true" /></label>
     </div>
 </header>
 
@@ -74,17 +75,17 @@
                             <option>Z</option>
                         </select>
                     </td>
-                    <td><input class="tt" type="text" placeholder="Example:XY123" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:XY234" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:01JUL" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:30SEP" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:1234500" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:120319" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:CDG" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:0700" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:0750" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:CDG" /></td>
-                    <td><input class="tt" type="text" placeholder="Example:JJ" /></td>
+                    <td><input class="tt" type="text" placeholder="XY123" check_ver="true"/></td>
+                    <td><input class="tt" type="text" placeholder="XY234" check_ver="true"/></td>
+                    <td><input class="tt" type="text" placeholder="01JUL" check_ver="true"/></td>
+                    <td><input class="tt" type="text" placeholder="30SEP" check_ver="true"/></td>
+                    <td><input class="tt" type="text" placeholder="1234500" check_ver="true" check_num="true"/></td>
+                    <td><input class="tt" type="text" placeholder="120319" /></td>
+                    <td><input class="tt" type="text" placeholder="CDG" name="coord_relation" check_time="true" /></td>
+                    <td><input class="tt" type="text" placeholder="0700" check_time="true"/></td>
+                    <td><input class="tt" type="text" placeholder="0750" check_time="true"/></td>
+                    <td><input class="tt" type="text" placeholder="CDG" name="coord_relation" check_time="true"/></td>
+                    <td><input class="tt" type="text" placeholder="JJ" check_ver="true" /></td>
                 </tr>
                 </tbody>
             </table>
@@ -96,15 +97,27 @@
     <div class="div_nav cf ti10 f18">Footer</div>
     <div class="div_body">
         <div class="div_alone pr lh30 ti15 f16">
-            SI:<input class="pa c6" type="text" placeholder="Examples:Reply from the Coordinator confirming the slot;">
+            SI:<input class="pa c6" type="text">
         </div>
         <div class="lh30 ti15 f16">
-            GI:<input class="pa c6" type="text" placeholder="Examples:Reply from the Coordinator confirming the slot;">
+            GI:<input class="pa c6" type="text" >
         </div>
     </div>
 </footer>
-
-<div class="coord_submit tc mt20"><a class="a_btn mr20 cf d_ilb pr" href="javascript:void(0);">发送</a><a class="a_btn cf d_ilb pr" href="javascript:void(0);">重置</a></div>
+<div class="coord_flight mx10 mt20">
+    <div class="div_nav cf ti10 f18">Flight Routes</div>
+    <div class="div_body" id="coord_text">
+        <p class="ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option>ZBAA-AGAVO-01</option></select></p>
+        <p class="ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option>ZBAA-ARGUK-01</option></select></p>
+        <p class="ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option>ZBAA-BISUN-01</option></select></p>
+        <p class="ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option>ZBAA-PURPA-03</option></select></p>
+    </div>
+</div>
+<div class="coord_submit tc mt20">
+    <a class="a_btn mr20 cf d_ilb pr" href="javascript:void(0);" check="true">提交</a>
+    <a class="a_btn mr20 cf d_ilb pr" href="javascript:void(0);">重置</a>
+    <a class="a_btn cf d_ilb pr" href="javascript:void(0);" check="true">生成报文</a>
+</div>
 
 </body>
 </html>
