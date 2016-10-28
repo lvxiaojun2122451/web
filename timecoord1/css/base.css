@@ -38,7 +38,6 @@ button::-moz-focus-inner {
     51% {box-shadow: 0px 0px 0px red; }
     to {box-shadow: 0px 0px 14px red;}
 }
-/*验证*/
 
 .clear:after{ content:""; display:block; clear:both;}
 .clear{ zoom:1;}
@@ -46,6 +45,7 @@ button::-moz-focus-inner {
 /* 
 	A  
 */
+
 
 /* 
 	B  
@@ -71,6 +71,7 @@ button::-moz-focus-inner {
 .bs{ 
 	box-sizing:border-box;
 }
+
 
 /* 
 	C  
@@ -118,6 +119,8 @@ button::-moz-focus-inner {
 	cursor:nw-resize;/*斜向下拉伸*/
 }
 
+
+
 /* 
 	D  
 */
@@ -137,6 +140,7 @@ button::-moz-focus-inner {
 /* 
 	E  
 */
+
 
 /* 
 	F  

@@ -1,0 +1,51 @@
+.about_body{
+    background: #E8E7E7;
+    overflow: auto;
+}
+.about_head , .about_content{
+    min-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about_head {
+    height: 40px;
+    line-height: 40px;
+}
+.about_content{
+    min-height: 100%;
+}
+.about_content{
+    height: auto;
+    background: #FFF;
+    border-radius: 2px;
+    padding: 10px 0;
+}
+.about_nav{
+    width: 160px;
+}
+.about_nav a{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+.about_nav a:hover{
+    background: #eee;
+}
+.about_nav a.active{
+    background: #eee;
+}
+.about_text p{
+    height: 30px;
+    line-height: 30px;
+    color: #666666;
+}
+.about_foot{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+.about_foot_com{
+    min-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto;
+}

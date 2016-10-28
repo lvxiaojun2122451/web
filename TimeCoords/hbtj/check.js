@@ -85,22 +85,15 @@ $(function(){
             });
 
             if( isAllVal ){ //部分有value
-                nodes.each(function(){
+                nodes.each(function(i){
 
-                    if( nodes.eq(0).val() !="" && nodes.eq(1).val() =="" ){
-                        coord_addClass( nodes.eq(1) )
+                    if( nodes.eq(i).val() !="" && nodes.eq(i+1).val() =="" ){
+
+                        coord_addClass( nodes.eq(i+1) )
                         off = false;
                         return false;
-                    }else if( nodes.eq(0).val() =="" && nodes.eq(1).val() !="" ){
-                        coord_addClass( nodes.eq(0) )
-                        off = false;
-                        return false;
-                    }else if( nodes.eq(2).val() !="" && nodes.eq(3).val() =="" ){
-                        coord_addClass( nodes.eq(3) )
-                        off = false;
-                        return false;
-                    }else if( nodes.eq(2).val() =="" && nodes.eq(3).val() !="" ){
-                        coord_addClass( nodes.eq(2) )
+                    }else if( nodes.eq(i).val() =="" && nodes.eq(i+1).val() !="" ){
+                        coord_addClass( nodes.eq(i) )
                         off = false;
                         return false;
                     }else{
