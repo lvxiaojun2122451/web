@@ -14,7 +14,7 @@ $(function(){
         //初始化
         _this.init = function(){
             if( type == "add" ){ //新增
-
+                _this.add();
             }else if( type == "operation"){
 
             }else{
@@ -23,7 +23,7 @@ $(function(){
         };
         //新增
         _this.add = function(){
-            
+            alert(0)
         };
 
         return _this.init();

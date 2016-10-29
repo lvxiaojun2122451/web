@@ -508,6 +508,7 @@ input:focus , select:focus , textarea:focus{
     height: 40px;
     line-height: 40px;
     background: linear-gradient(#5AB8EF 0 , #3592C6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AB8EF', endColorstr='#3592C6',GradientType=0 );
 }
 .menu_min .sidebar_head{
     width: 43px;
@@ -876,6 +877,7 @@ input:focus , select:focus , textarea:focus{
     border-bottom: solid 1px #C1CDDD;
 }
 .max_table{
+    min-width:1448px;
     border-top: solid 1px #C1CDDD;
     border-left: solid 1px #C1CDDD;
 }
@@ -895,7 +897,8 @@ input:focus , select:focus , textarea:focus{
     background:linear-gradient(#DDE9F9 0 , #fff 100%);
 }
 .min_table .tr_head{
-    background: linear-gradient(#F7F7F7 0 , #F2F2F2 50% , #ECECEC 100%);
+    background: linear-gradient(#F7F7F7 0 , #ECECEC 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#F2F2F2',GradientType=0 );
 }
 .max_table .tr_head td{
     height: 36px;
@@ -912,8 +915,8 @@ input:focus , select:focus , textarea:focus{
     font-weight: auto;
 }
 .overflow_head{
-    padding-right: 17px;
     background: linear-gradient(#F7F7F7 0 , #F2F2F2 50% , #ECECEC 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#F2F2F2',GradientType=0 );
 }
 .overflow_body{
     overflow-y: scroll;

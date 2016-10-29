@@ -14,8 +14,11 @@ input::-moz-focus-inner { border:none; padding:0; }
 select, input { vertical-align:middle; }
 input[type="text"], input[type="password"], textarea { outline-style:none; -webkit-appearance:none; }
 textarea { resize:none; }
-table { border-collapse:collapse; table-layout:fixed;}
+table { border-collapse:inherit; table-layout:fixed;}
 ul , li{ list-style:none;}
+
+/*html5*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
 button::-moz-focus-inner {
     border:0;
