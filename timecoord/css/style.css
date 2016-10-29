@@ -857,6 +857,8 @@ input:focus , select:focus , textarea:focus{
 .fun{
     height: 50px;
     line-height: 46px;
+    margin-right: 17px;
+    border-bottom: solid 1px #c1cddd;
 }
 .details{
     height: 100%;
@@ -878,7 +880,6 @@ input:focus , select:focus , textarea:focus{
 }
 .max_table{
     min-width:1448px;
-    border-top: solid 1px #C1CDDD;
     border-left: solid 1px #C1CDDD;
 }
 .max_table .td_right0{
