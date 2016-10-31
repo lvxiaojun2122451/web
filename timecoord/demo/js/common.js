@@ -10,8 +10,9 @@ $(function(){
     FMPS.index = {
         //初始化
         init : function(){
-            this.loadHTML("apply.html");
-            this.clickLoadHTML();
+            this.loadHTML("coord.html");
+            //this.clickLoadHTML();
+            this.defaultValue();
         },
         //用户登录菜单
         nav : function(){
@@ -132,8 +133,19 @@ $(function(){
 
             })
 
+        },
+        //input输入的时候改变DOM的value
+        defaultValue : function(){
+            $(document).on("input",function(ev){
+                var ev = ev || event,
+                    nodes = ev.target || ev.srcElement;
+                if( nodes.tagName == "INPUT" ||  nodes.tagName == "SELECT" || nodes.tagName == "TEXTAREA"){
+                    nodes.defaultValue = nodes.value;
+                }else{
+                    return false;
+                }
+            })
         }
-
     };
     //初始化调用
     FMPS.index.init();

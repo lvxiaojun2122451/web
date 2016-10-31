@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="../css/coord.css" rel="stylesheet" type="text/css" />
-    <script src="js/matching.js"></script>
+    <script src="js/validate.js"></script>
     <script src="js/coord.js"></script>
 </head>
 <body>
@@ -46,7 +46,7 @@
 </div>
 <div class="details bs">
     <div class="w100 h100 oa" style="padding-right: 15px">
-        <table class="max_table" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <table class="max_table" id="validate" width="100%" cellspacing="0" cellpadding="0" border="0">
             <thead></thead>
             <tbody>
             <tr>
@@ -66,10 +66,10 @@
                                 <label class="f14 ml20">Season:&nbsp;&nbsp;<input class="public_input" type="text" value="S08" disabled="disabled"></label>
                             </td>
                             <td colspan="3">
-                                <label class="f14 ml20">Date Of Message:&nbsp;&nbsp;<input class="tt public_input" type="text" placeholder="20APR" check_ver="true"></label>
+                                <label class="f14 ml20">Date Of Message:&nbsp;&nbsp;<input class="tt public_input" type="text" placeholder="20APR" validate="must" validate="aaa"></label>
                             </td>
                             <td colspan="3">
-                                <label class="f14 ml20">Clearance Airport Concerned:&nbsp;&nbsp;<input class="tt public_input" id="coord_takeoff" type="text" placeholder="BRU" name="coord_relation" check_ver="true"></label>
+                                <label class="f14 ml20">Clearance Airport Concerned:&nbsp;&nbsp;<input class="tt public_input" type="text" placeholder="BRU" validate="must"></label>
                             </td>
                         </tr>
                         </tbody>
@@ -126,209 +126,17 @@
                                                     <option>Z</option>
                                                 </select>
                                             </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
+                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" validate="must"></td>
+                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" validate="must"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="01JUL" validate="must"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="30SEP" validate="must"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="1234500" validate="must"></td>
                                             <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="coord_tdWidth120">
-                                                <select class="public_select">
-                                                    <option>N</option>
-                                                    <option>D</option>
-                                                    <option>C</option>
-                                                    <option>R</option>
-                                                    <option>A</option>
-                                                    <option>P</option>
-                                                    <option>Z</option>
-                                                </select>
-                                            </td>
-                                            <td class="coord_tdWidth140"><input class="tt public_input" type="text" placeholder="XY123" check_ver="true"></td>
-                                            <td class="coord_tdWidth160"><input class="tt public_input" type="text" placeholder="XY234" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="01JUL" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="30SEP" check_ver="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="1234500" check_ver="true" check_num="true"></td>
-                                            <td class="coord_tdWidth120"><input class="tt public_input" type="text" placeholder="120319"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0700" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="0750" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="CDG" name="coord_relation" check_time="true"></td>
-                                            <td><input class="tt public_input" type="text" placeholder="JJ" check_ver="true"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="CDG" validate="must"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="0700" validate="must"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="0750" validate="must"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="CDG" validate="must"></td>
+                                            <td><input class="tt public_input" type="text" placeholder="JJ" validate="must"></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -387,9 +195,9 @@
             </tr>
             <tr>
                 <td class="tc py10">
-                    <a class="applyHTML public_btn cf d_ilb pr f14" href="javascript:void(0);" check="true">Commit</a>
+                    <a class="applyHTML public_btn cf d_ilb pr f14" href="javascript:void(0);" validate="true">Commit</a>
                     <a class="public_btn cf d_ilb pr f14" href="javascript:void(0);">Reset</a>
-                    <a class="applyHTML public_btn cf d_ilb pr f14" href="javascript:void(0);" check="true">Build Message</a>
+                    <a class="applyHTML public_btn cf d_ilb pr f14" href="javascript:void(0);" validate="true">Build Message</a>
                 </td>
             </tr>
             </tbody>

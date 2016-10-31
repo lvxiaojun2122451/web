@@ -14,7 +14,7 @@ $(function(){
         _this.settings = {
             options : null ,
             //如果第一个tr里面有input或者select等， 新创建的tr的input，select的value是否继承
-            isInheritFocus : true,
+            isInheritFocus : false,
             //是否是在table的最下面添加还是在选中的当前行添加
             isLastAdd : true ,
             //回调函数
@@ -45,32 +45,36 @@ $(function(){
                 obj = _this.parents("tr").first();
             };
             var content = _this.content( obj , _this.settings.isInheritFocus );
-            obj.after("<tr>"+content+"</tr>");
+            obj.after(content);
         };
+
+        //初始化生成表格
+        this.production = function(){
+
+        }
 
         //获取具体tr里面是什么内容
         _this.content = function(){
             var isInheritFocus = arguments[1],
                 tr = arguments[0],
-                str = "";
+                str = $("<tr></tr>");
             var td = tr.children();
+
             //如果为真为继承
             if(isInheritFocus){
-                str = tr.html();
+                str.html( tr.html() );
             }else{//不继承
-
+                str.html( tr.html() );
+                str.find("input,textarea").val("");
             }
-
+            //console.log( str )
             return str;
         }
 
         return _this.init();
     };
 
-
-
 //调用统一调用生成表格
-
 $(document).on("click",function( ev ){
     var ev = ev || event,
         nodes = ev.target || ev.srcElement;
