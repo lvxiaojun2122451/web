@@ -9,15 +9,18 @@ $(function(){
             nodes = ev.target || ev.srcElement;
         if( $(nodes).attr("validate") == "true" ){
             var id = $("#validate");
-            $(nodes).Validate({
+            var aa = $(nodes).Validate({
                 id : id,
                 success : function(){
-
+                    this.pop( $("#sidebar") , "你好你好你好你好" )
                 }
             });
+
+            //console.log(  )
+
         }else{
             return false;
         }
-    })
+    });
 
 })

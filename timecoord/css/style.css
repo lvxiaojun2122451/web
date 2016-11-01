@@ -928,4 +928,35 @@ input:focus , select:focus , textarea:focus{
 .coord_table tr td:last-child{
     border-right: 0 !important;
 }
+/*错误信息*/
+.errorMessage{
+    max-width:100px;
+    background: #f00;
+    font-size: 12px;
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 29;
+    padding: 5px 10px;
+    left: 100px;
+    top: 100px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #999;
+    animation: key .2s linear forwards;
+
+}
+@keyframes key {
+    from { transform:scale(0) }
+    to {transform:scale(1)}
+}
+.errorMessage:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -9px;
+    top: 4px;
+    background: url("img/ico36.png") no-repeat;
+}
+/*错误信息*/
 
