@@ -1,47 +1,60 @@
 /**
  * Created by Administrator on 2016/10/28.
  */
-/*
-* 验证的js
-* */
+
 $(function(){
+/*
+ * 验证的js
+ * */
+(function($){
+
+    //验证细节
     $.fn.Validate = function(options){
-        var _this = this,
-            parent,
-            childrens;
-
+        var _this = this;
         //配置参数
-        _this.settings = {
-            id : $("body"),
-            text : {
-                must : "必填项必填项必填项必填项必填项",
-                hour : "四位时分数"
-            },
-            success : function(){}
-        };
+        _this.settings = $.extend({
 
-        $.extend( _this.settings , options );
-        parent = _this.settings.id;
-        childrens = parent.find("input[validate_must] , input[validate_aaa] , textarea[validate_must] , textarea[validate_aaa]");
+            //文本
+            text :{
+                must : "必填项",
+                num : "数字",
+                phone : "电话号"
+            },
+            //验证成功以后
+            success : function(){}
+        },options);
+
+        //元素
+        _this.element = {
+            //当前提交按钮
+            submit : _this.find("*[ validate ^= 'true']")
+        };
 
         //初始化
         _this.init = function(){
-            //逐个验证
-            var controller = true;
-            $.each(childrens,function(){
-                var off = _this.verification( $(this) );
-                if( off == false){
-                    controller = false;
-                    $(this).focus();
-                    return false;
-                }else{
-                    controller = true;
+
+            //提交按钮绑定事件
+            _this.element.submit.on("click",function(){
+
+                //需要验证的元素
+                _this.element['obj'] = _this.find("input[data-Validate]");
+
+                //逐个验证
+                var controller = true;
+                $.each( _this.element.obj ,function(){
+                    var off = _this.verification( $(this) );
+                    if( off == false){
+                        controller = false;
+                        $(this).focus();
+                        return false;
+                    }else{
+                        controller = true;
+                    };
+                });
+                if(controller){
+                    _this.settings.success.call(_this);
                 };
             });
-            if(controller){
-                _this.settings.success();
-            };
-
         };
         //验证弹出层创建
         _this.pop = function(obj ,text){
@@ -68,18 +81,17 @@ $(function(){
         }
         //验证
         _this.verification = function( obj ){
-            //必填项
-            var off;
-            if( obj.attr("validate_must") == "true" ){
-                off = _this.must(obj);
-                if( off == false ){
+            var keyWork = obj.attr("data-Validate").split(","),
+                len = keyWork.length,
+                off = true;
+            $.each( keyWork , function(i){
+                if(off == false){
                     return false;
-                };
-            //有效期
-            }else if( obj.attr("validate_time") == "true" ){//aaa
-
-            }else{
-                return;
+                }
+                off = _this[keyWork](obj);
+            });
+            if(off == false){
+                return false;
             }
         };
 
@@ -92,11 +104,20 @@ $(function(){
             }
         };
         //有效期
-        _this.validity = function(){
+        _this.num = function(){
 
-        }
-
+        };
         _this.init();
         return this;
     };
+
+    //给验证添加自定义方法
+    $.extend( $.fn.Validate,{
+        addMethod : function( name, method, message ){
+            var a = new $.fn.Validate();
+            console.log(  a )
+            method()
+        }
+    })
+})(jQuery);
 });

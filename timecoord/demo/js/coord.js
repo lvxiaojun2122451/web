@@ -4,23 +4,16 @@
 $(function(){
 
     //统一调用
-    $(document).on("click",function( ev ){
-        var ev = ev || event,
-            nodes = ev.target || ev.srcElement;
-        if( $(nodes).attr("validate") == "true" ){
-            var id = $("#validate");
-            var aa = $(nodes).Validate({
-                id : id,
-                success : function(){
-                    this.pop( $("#sidebar") , "你好你好你好你好" )
-                }
-            });
-
-            //console.log(  )
-
-        }else{
-            return false;
+    $("#validate").Validate({
+        //验证成功
+        success : function(){
+            alert("验证成功")
         }
     });
+
+    $.fn.Validate.addMethod("phone",function(){
+
+
+    },"手机格式不对")
 
 })

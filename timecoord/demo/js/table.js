@@ -1,6 +1,13 @@
 /**
  * Created by Administrator on 2016/10/28.
  */
+/*
+* $("").Tables({
+*
+* })
+*
+*
+* */
 $(function(){
 
 //生成表格对象，jquery创建
@@ -70,8 +77,8 @@ $(function(){
             //console.log( str )
             return str;
         }
-
-        return _this.init();
+        _this.init();
+        return _this;
     };
 
 //调用统一调用生成表格
