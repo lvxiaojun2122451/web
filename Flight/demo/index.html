@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-1.8.2.js"></script>
+    <script src="../js/html5.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/table.js"></script>
+</head>
+<body class="index_body">
+<header class="index_head pa bs px20 w100 t0">
+    <h1>
+        <a class="logo f20 fl cf yh " href="javascript:void(0);">日常计划管理</a>
+    </h1>
+
+    <ul class="nav clear bgf fr">
+        <li class="fl pr">
+            <a class="message trs1 d_block px10 h100 pr" href="javascript:void(0);">
+                <i class="ico_1 d_ilb vm"></i>
+                <span class="round cf d_ilb vm tc">3</span>
+            </a>
+            <div class="message_pop nav_pop bgf pa d_none">
+                <ul>
+                    <li class="li_bd_bootom fb">8条通知</li>
+                    <li class="bs px10">
+                        <a class="li_bd_bootom d_block py10 lh24 c6" href="javascript:void(0);">新通知<span class="span_text fr cf">+12</span></a>
+                    </li>
+                    <li class="bs px10">
+                        <a class="li_bd_bootom d_block py10 lh24 c6" href="javascript:void(0);">时时动态<span class="span_text fr cf">+231</span></a>
+                    </li>
+                    <li class="bs px10">
+                        <a class="li_bd_bootom d_block py10 lh24 c6" href="javascript:void(0);">新订单<span class="span_text fr cf">+12</span></a>
+                    </li>
+                    <li class="bs px10">
+                        <a class="li_bd_bootom d_block py10 lh24 c6" href="javascript:void(0);">导向<span class="span_text fr cf">+3</span></a>
+                    </li>
+                    <li><a class="d_block lh30 tc" href="javascript:void(0);">查看更多通知<i class="ico4 d_ilb vm ml5"></i></a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="fl pr">
+            <a class="notice trs1 d_block px10 h100 pr" href="javascript:void(0);">
+                <i class="ico_1 d_ilb vm"></i>
+                <span class="round cf d_ilb vm tc">23</span>
+            </a>
+            <div class="notice_pop nav_pop bgf pa d_none">
+                <ul>
+                    <li class="fb li_bd_bootom">5条消息</li>
+                    <li class="bs px10">
+                        <a class="li_bd_bootom d_block py10 ws_n" href="javascript:void(0);">
+                            <img class="d_ilb vm mr5" src="../css/img/avatar.png" />
+                            <span class="d_ilb vm lh20">
+                                <span class="span_body d_block c3 ws_h">
+                                    <span class="span_name">小明:</span>今天早上吃什么...
+                                </span>
+                                <span class="span_time d_block c6">一小时前</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="bs px10">
+                        <a class="li_bd_bootom d_block py10 ws_n" href="javascript:void(0);">
+                            <img class="d_ilb vm mr5" src="../css/img/avatar.png" />
+                            <span class="d_ilb vm lh20">
+                                <span class="span_body d_block c3 ws_h">
+                                    <span class="span_name">小明:</span>今天早上吃什么...
+                                </span>
+                                <span class="span_time d_block c6">4月14日14小时</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="bs px10">
+                        <a class="li_bd_bootom d_block py10 ws_n" href="javascript:void(0);">
+                            <img class="d_ilb vm mr5" src="../css/img/avatar.png" />
+                            <span class="d_ilb vm lh20">
+                                <span class="span_body d_block c3 ws_h">
+                                    <span class="span_name">小明:</span>今天早上吃小鸡炖蘑菇...
+                                </span>
+                                <span class="span_time d_block c6">23小时前</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="tc">
+                        <a class="d_block" href="javascript:void(0);">查看更多信息
+                            <i class="ico3 d_ilb vm"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="fl pr">
+            <a class="user trs1 d_block px10 h100 pr" href="javascript:void(0);">
+                <img class="img_alone d_ilb vm mr10" src="../css/img/user.jpg" />
+                <span class="span_body d_ilb vm cf mr5">
+                    <span class="d_block">欢迎光临 , </span>华东地区负责人
+                </span>
+                <i class="ico2 d_ilb vm"></i>
+            </a>
+            <div class="user_pop nav_pop bgf pa d_none">
+                <ul class="py10">
+                    <li><a class="d_block lh24 c3" href="javascript:void(0);">个人资料</a></li>
+                    <li class="li_bd_bootom my10"></li>
+                    <li><a class="d_block lh24 c3" href="javascript:void(0);">退出</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+</header>
+
+<section class="index_content h100 w100 bs">
+
+    <!--侧边栏-->
+    <div class="sidebar fl pr bs" id="sidebar">
+        <div class="sidebar_head cf"><i class="ico_1 vm d_ilb mx10"></i>工具栏</div>
+
+        <div class="sidebar_body">
+            <ul>
+                <li class="pr">
+                    <a class="a_toggle a_nav d_block" href="javascript:void(0);">
+                        <i class="ico_1 d_ilb vm ml10"></i>
+                        <span class="span_menu c6 vm pr">基本信息检索</span>
+                        <b class="pa"></b>
+                    </a>
+                    <ul class="ul_list bgf pr d_none">
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">航站流量库</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">地方代码</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">机型代码</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">公司代码</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">航段时间库</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pr">
+                    <a class="a_toggle a_nav d_block" href="javascript:void(0);">
+                        <i class="ico_1 ico_1_2 d_ilb vm ml10"></i>
+                        <span class="span_menu c6 vm pr">日常计划管理</span>
+                        <b class="pa"></b>
+                    </a>
+                    <ul class="ul_list bgf pr d_none">
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">批量计划上传</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">日常计划管理</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">预先飞行计划库管理</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">计划申请</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pr">
+                    <a class="a_toggle a_nav d_block" href="javascript:void(0);">
+                        <i class="ico_1 ico_1_3 d_ilb vm ml10"></i>
+                        <span class="span_menu c6 vm pr">时刻协调</span>
+                        <b class="pa"></b>
+                    </a>
+                    <ul class="ul_list bgf pr d_none">
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">数据刷新</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">导入历史库</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">数据合并</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">历史航班查询</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">外机计划查询</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">计划审批查询</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">换季统计</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">航段时间管理</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">核对航路</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pr">
+                    <a class="a_nav d_block" href="javascript:void(0);">
+                        <i class="ico_1 ico_1_4 d_ilb vm ml10"></i>
+                        <span class="span_menu c6 vm pr">机场流量</span>
+                        <b class="pa d_none"></b>
+                    </a>
+                </li>
+
+                <li class="pr">
+                    <a class="a_toggle a_nav d_block" href="javascript:void(0);">
+                        <i class="ico_1 ico_1_5 d_ilb vm ml10"></i>
+                        <span class="span_menu c6 vm pr">系统管理</span>
+                        <b class="pa"></b>
+                    </a>
+                    <ul class="ul_list bgf pr d_none">
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">日志管理</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">修改密码</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">系统备份</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">系统初始化设置</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pr">
+                    <a class="a_toggle a_nav d_block" href="javascript:void(0);">
+                        <i class="ico_1 ico_1_6 d_ilb vm ml10"></i>
+                        <span class="span_menu c6 vm pr">用户管理</span>
+                        <b class="pa"></b>
+                    </a>
+                    <ul class="ul_list bgf pr d_none">
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">修改密码</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                        <li class="pr">
+                            <a class="a_list d_block bs pr" href="javascript:void(0);">
+                                <i class="ico_2 d_block pa"></i>
+                                <span class="span_list c6">站内通知</span>
+                                <b class="pa"></b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="sidebar_foot tc pr">
+            <i class="shrink ico_1 d_ilb vm pr cp"></i>
+        </div>
+    </div>
+    <!--侧边栏-->
+
+    <!--主体内容-->
+    <div class="main_content" id="main_content">
+        <!--当前位置-->
+        <div class="current bs px10">
+            <ul>
+                <li class="fl pr c6">
+                    <i class="vm d_ilb"></i>
+                    <a class="d_ilb" href="javascript:void(0);">首页</a>
+                </li>
+                <li class="fl pr c6">
+                    <a class="d_ilb" href="javascript:void(0);">时刻协调</a>
+                </li>
+                <li class="fl pr c6">
+                    航班计划
+                </li>
+            </ul>
+        </div>
+        <!--当前位置-->
+        <!--content主体内容-->
+        <section class="page_content bs" >
+            <div class="w100 h100 bs pl20 pt10 pb10 pr" id="content"></div>
+        </section>
+        <!--content主体内容-->
+    </div>
+    <!--主体内容-->
+
+</section>
+
+<footer class="index_foot pa w100 bottom0"><p class="p_text c9 fr pr10 mr10">版权所有 民航局运行监控中心 民航数据通信有限责任公司</p></footer>
+
+
+</body>
+</html>

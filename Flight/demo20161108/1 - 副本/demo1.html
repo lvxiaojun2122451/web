@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="base.css" type="text/css" rel="stylesheet" />
+    <link href="css.css" type="text/css" rel="stylesheet" >
+    <script src="jquery-1.8.2.js"></script>
+    <script src="js.js"></script>
+</head>
+<body>
+<div class="temporary">
+    <div class="fun w100">
+        <ul class="clear">
+            <li class="fl">
+                <label>
+                    <span class="fb">航班号：</span>
+                    <input class="public_input" type="text">
+                </label>
+            </li>
+            <li class="fl">
+                <label>
+                    <span class="fb">起飞机场：</span>
+                    <select class="public_select">
+                        <option>ZBAA</option>
+                        <option>ZSPD</option>
+                    </select>
+                </label>
+            </li>
+            <li class="fl">
+                <label>
+                    <span class="fb">降落机场：</span>
+                    <select class="public_select">
+                        <option>ZBAA</option>
+                        <option>ZSPD</option>
+                    </select>
+                </label>
+            </li>
+            <li class="fl">
+                <lable>
+                    <span class="fb">执行日期：</span>
+                    <input class="public_input" type="text" placeholder="20160101" />
+                    <span class="span_line"></span>
+                    <input class="public_input" type="text" placeholder="20160523" />
+                </lable>
+            </li>
+            <li class="fl">
+                <label>
+                    <input type="radio" name="temporary_type" />临时班机线
+                </label>
+            </li>
+            <li class="fl">
+                <label>
+                    <input type="radio" name="temporary_type" />军民合用机场
+                </label>
+            </li>
+            <li class="fl">
+                <label>
+                    <input type="radio" name="temporary_type" />现行班机航线高度
+                </label>
+            </li>
+            <li class="fl">
+                <label>
+                    <a class="public_btn" href="javascript:void(0);">查询</a>
+                    <a class="tem_appply public_btn" href="javascript:void(0);">申请计划</a>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="details bs">
+        <div class="w100 h100 oa" style="padding-right: 15px">
+            <table class="max_table" id="validate" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="overflow_head">
+                            <table class="tc min_table" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <thead>
+                                <tr class="fb tr_head">
+                                    <td class="temporary_tdWidth50">行号</td>
+                                    <td class="temporary_tdWidth100">操作</td>
+                                    <td class="temporary_tdWidth100">航班号</td>
+                                    <td class="temporary_tdWidth150">类型</td>
+                                    <td class="temporary_tdWidth100">机型</td>
+                                    <td class="temporary_tdWidth150">起飞机场</td>
+                                    <td class="temporary_tdWidth150">降落机场</td>
+                                    <td>航线走向</td>
+                                    <td>飞行高度</td>
+                                    <td>执行日期</td>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="tem_discoloration coord_table tc" id="coord_table" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">1</td>
+                                        <td class="temporary_tdWidth100">
+                                            <button class="btn_as" type="button"></button>
+                                            <button class="btn_cs" type="button"></button>
+                                        </td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">2</td>
+                                        <td class="temporary_tdWidth100">
+                                            <button class="btn_as" type="button"></button>
+                                            <button class="btn_cs" type="button"></button>
+                                        </td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">3</td>
+                                        <td class="temporary_tdWidth100">
+                                            <button class="btn_as" type="button"></button>
+                                            <button class="btn_cs" type="button"></button>
+                                        </td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">4</td>
+                                        <td class="temporary_tdWidth100"></td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">5</td>
+                                        <td class="temporary_tdWidth100"></td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">6</td>
+                                        <td class="temporary_tdWidth100"></td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">7</td>
+                                        <td class="temporary_tdWidth100"></td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">8</td>
+                                        <td class="temporary_tdWidth100"></td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">9</td>
+                                        <td class="temporary_tdWidth100"></td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="temporary_tdWidth50">10</td>
+                                        <td class="temporary_tdWidth100"></td>
+                                        <td class="temporary_tdWidth100">CCA8335/6</td>
+                                        <td class="temporary_tdWidth150">临时班机线</td>
+                                        <td class="temporary_tdWidth100">B737</td>
+                                        <td class="temporary_tdWidth150">ZBAA</td>
+                                        <td class="temporary_tdWidth150">ZSPD</td>
+                                        <td>西安咸阳经洛......</td>
+                                        <td>7200米；回程：6900米</td>
+                                        <td>20160302-20161123</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tc py10"><span class="fl">总条数：<span>342</span></span>加入分页</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="tem_pop d_none">
+    <div class="pop_head bs pz10">
+        <p>新建窗口</p>
+        <i></i>
+    </div>
+
+    <div class="pop_body bs bf px15">
+        <div>
+            <ul class="temporary_tab tem_type_1">
+                <li class="temporary_tabHead">
+                    <ul class="text">
+                        <li class="fl active">
+                            <a class="w100 h100 d_block c3 tc f14" href="javascript:void(0);">临时班机航线</a>
+                        </li>
+                        <li class="fl">
+                            <a class="w100 h100 d_block c3 tc f14" href="javascript:void(0);">军民合用机场</a>
+                        </li>
+                        <li class="fl">
+                            <a class="w100 h100 d_block c3 tc f14" href="javascript:void(0);">现行班机航线高度</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="temporary_tabBody">
+                    <ul class="text">
+                         <li class="w100 h100">
+                             <ul>
+                                 <li class="py5">
+                                     <div class="d_ilb vm">
+                                         <span class="span_width60 d_ilb">航班号：</span>
+                                         <input class="public_input" type="text" />
+                                     </div>
+                                     <div class="d_ilb vm ml10">
+                                         <span class="span_width60 d_ilb">机型：</span>
+                                         <input class="public_input" type="text" />
+                                     </div>
+                                 </li>
+                                 <li class="py5">
+                                     <div class="d_ilb vm">
+                                         <span class="span_width60 d_ilb">起飞机场：</span>
+                                         <select class="public_select">
+                                             <option>ZBAA</option>
+                                             <option>ZBAA</option>
+                                         </select>
+                                     </div>
+                                     <div class="d_ilb vm ml10">
+                                         <span class="span_width60 d_ilb">降落机场：</span>
+                                         <select class="public_select">
+                                             <option>ZBAA</option>
+                                             <option>ZBAA</option>
+                                         </select>
+                                     </div>
+                                 </li>
+
+                                 <li class="tem_list1 py5">
+                                     <div class="d_ilb vm">
+                                         <span class="span_pr15 span_width60 d_ilb">特殊说明：</span>
+                                         <textarea class="textarea_width300">
+
+                                         </textarea>
+                                     </div>
+                                 </li>
+                                 <li class="py5">
+                                     <div class="d_ilb vm">
+                                         <span class="span_width60 d_ilb">执行日期：</span>
+                                         <input class="public_select" type="text" />
+                                         <span class="span_line"></span>
+                                         <input class="public_select" type="text" />
+                                     </div>
+                                 </li>
+                                 <li class="tem_list3 py5">
+                                     <div class="d_ilb vm">
+                                         <span class="span_width60 d_ilb">航线走向：</span>
+                                         <input class="" value="按空军一号规定走向。" type="text" disabled="disabled">
+                                     </div>
+                                     <div class="d_ilb vm ml10">
+                                         <span class="span_width60 d_ilb">飞行高度：</span>
+                                         <input class="public_select" type="text">
+                                         <span>米</span>
+                                     </div>
+                                 </li>
+                                 <li class="tem_list3 py5">
+                                     <div class="d_ilb vm">
+                                         <span class="span_width60 d_ilb">回程：</span>
+                                         <input class="public_select" type="text">
+                                         <span>米</span>
+                                     </div>
+                                 </li>
+                                 <li class="tem_list1 py5">
+                                     <div class="d_ilb vm">
+                                         <span class="span_pr37 span_width60 d_ilb">航线走向：</span>
+                                         <div class="d_ilb">
+                                             <div>
+                                                 <span class="span_pr15">去程：</span>
+                                                 <textarea class="textarea_width300"></textarea>
+                                             </div>
+                                             <div>
+                                                 <span class="span_pr15">回程：</span>
+                                                 <textarea class="textarea_width300"></textarea>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </li>
+                             </ul>
+                         </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pop_foot bs tc">
+        <a class="vm" href="javascript:void(0);">确认</a>
+        <a class="vm" href="javascript:void(0);">取消</a>
+    </div>
+</div>
+
+</body>
+</html>
